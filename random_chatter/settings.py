@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['random-chatter-indian.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -126,6 +126,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     # '/var/www/static/',
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 django_heroku.settings(locals())
