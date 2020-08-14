@@ -5,8 +5,8 @@ from .models import Message
 
 
 class MessageSerializer(serializers.ModelSerializer):
-    sender = serializers.SlugRelatedField(many=False, slug_field='username', queryset=User.objects.all())
-    receiver = serializers.SlugRelatedField(many=False, slug_field='username', queryset=User.objects.all())
+    sender = serializers.SlugRelatedField(many=False, slug_field='user_name', queryset=User.objects.all())
+    receiver = serializers.SlugRelatedField(many=False, slug_field='user_name', queryset=User.objects.all())
 
     class Meta:
         model = Message
